@@ -15,8 +15,7 @@
           <div class="main" style="width: 33%">
             <h1>Trading Journal</h1>
               </div>
-        <div style="width: 33%;">
-        </div>
+        <div style="width: 33%;" id="wr"></div>
     </header>
       <div class="classes" id="main">
         <SPAN>Currency</SPAN>
@@ -35,5 +34,33 @@
     <div id="journal">
         <!-- Journal entries will be dynamically added here -->
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    // Wybieramy wszystkie divy z klasą "value"
+    const divsWithClassValue = $('.value');
+
+    // Liczymy ilość wystąpień "Win" w divach z klasą "value"
+    let countWins = 0;
+    divsWithClassValue.each(function() {
+      if ($(this).text() === 'Win' && 'win') {
+        countWins++;
+      }
+    });
+    let countLoss = 0;
+    divsWithClassValue.each(function() {
+      if ($(this).text() === 'Loss') {
+        countLoss++;
+      }
+    });
+    let wr = countWins+countLoss;
+    let wrt = countWins/wr; 
+    let winrate = wrt*100;
+    let zaokraglonywinrate = winrate.toFixed(2)
+
+    let wrDiv = document.getElementById("wr");
+    wrDiv.innerHTML ="<h2 class='winrate'>Winrate: "+zaokraglonywinrate+"%</h2>";
+  });
+  </script>
 </body>
 </html>

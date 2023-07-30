@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const form = document.createElement("form");
                 form.setAttribute("id", "entry-form");
+                
 
         // Create the Currency input
         const currencyLabel = document.createElement("label");
@@ -269,7 +270,6 @@ document.addEventListener("DOMContentLoaded", function () {
           journalDiv.appendChild(entryDiv);
         }
       }
-      
     
 
 function deleteEntry(index) {

@@ -218,3 +218,10 @@ select {
 .value:nth-child(12){
     width: 15%;
 }
+.wr {
+ display: flex;   
+}
+.winrate {
+    position: absolute;
+    right: 20px;
+}
