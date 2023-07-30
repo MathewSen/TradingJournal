@@ -101,58 +101,25 @@ body {
     text-align: left;
 }
 .deleter {
-    background-color: none;
-    background: none;
-    border: none;
-    margin-left: 95.5%;
+    padding: 10px;
     position: absolute;
-    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    border: transparent;
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 96.5%;
+    transition: 0.5s;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.gg-trash {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    transform: scale(var(--ggs,1));
-    width: 10px;
-    height: 12px;
-    border: 2px solid transparent;
-    border-bottom-left-radius: 1px;
-    border-bottom-right-radius: 1px;
-    margin-top: 4px;
-    background: none;
-    color: white;
-    margin-left: 20px;
-    transition: all 0.3s ease-in-out;
-}
-.gg-trash:hover {
-    transform: translateY(-3px);
-}
-.gg-trash::after,
-.gg-trash::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    background: none;
-}
-.gg-trash::after {
-    background: currentColor;
-    border-radius: 3px;
-    width: 16px;
-    height: 2px;
-    top: -4px;
-    left: -5px;
-    background: none;
-}
-.gg-trash::before {
-    width: 10px;
-    height: 4px;
-    border: 2px solid;
-    border-bottom: transparent;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    background: none;
+.deleter:hover {
+    box-shadow: 0px 0px 15px 0px rgba(71, 76, 80, 1);
+    transform: translateY(-4px);
 }
 
   header {
@@ -161,24 +128,28 @@ body {
   }
   
   .adder {
-    text-align: center;
-    background:none;
-    border: none;
-    max-width: 20px;
-    margin-left: 38px;
-    transition: all 0.3s ease-in-out;
-    max-height: 20px;
-    border-radius: 5px;
-    margin-left: 9.75%;
+  padding: 10px;
+  position: relative;
+  background-color: transparent;
+  border: transparent;
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: 9.8%;
+  transition: 0.5s;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
+  .adder > * {
+  margin-bottom: 20px;
+  }
+
   .adder:hover  {
-    box-shadow: 0px 0px 10px 0px rgba(71, 76, 80, 1);
-  }
-  .adder p {
-    color: white;
-    font-size: 20px;
-    top: 40%;
-    position: absolute;
+    box-shadow: 0px 0px 15px 0px rgba(71, 76, 80, 1);
+    transform: translateY(-4px);
   }
 
 select {
@@ -189,6 +160,7 @@ select {
     position: absolute;
     right: 0;
     margin-right: 5%;
+    
 }
 
 #journal {
@@ -245,25 +217,4 @@ select {
 }
 .value:nth-child(12){
     width: 15%;
-}
-@media (max-width: 768px) {
-    .main h1 {
-        font-size: 20px;
-    }
-    .value {
-        font-size: 10px;
-    }
-    .classes span {
-        font-size: 10px;
-    }
-    .classes * {
-        flex: 0 0 1%;
-        padding: 5px;
-        text-align: left;
-        max-width: 50px;
-    }
-}
-/* For screens larger than 768px (e.g., tablets and desktops) */
-@media (min-width: 769px) {
-
 }

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const journalDiv = document.getElementById("journal");
             const mainDiv = document.getElementById("main");
             const addButton = document.createElement("button");
-            addButton.innerHTML = "<p>+</p>";
+            addButton.innerHTML = "+";
             addButton.classList.add("adder");
             mainDiv.appendChild(addButton);
     
@@ -150,8 +150,9 @@ document.addEventListener("DOMContentLoaded", function () {
         form.appendChild(cancelButton);
 
         saveButton.addEventListener("click", function () {
+            closeEntryForm();
             saveEntry(form);
-            closeEntryForm(); // Call this function to close the entry form
+          
         });
 
         cancelButton.addEventListener("click", function () {
