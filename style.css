@@ -152,8 +152,6 @@ body {
     border-bottom: transparent;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    top: -7px;
-    left: -2px;
     background: none;
 }
 
@@ -179,7 +177,7 @@ body {
   .adder p {
     color: white;
     font-size: 20px;
-    top: 80px;
+    top: 40%;
     position: absolute;
   }
 
@@ -190,7 +188,7 @@ select {
     text-align: right;
     position: absolute;
     right: 0;
-    margin-right: 5px;
+    margin-right: 5%;
 }
 
 #journal {
@@ -247,4 +245,25 @@ select {
 }
 .value:nth-child(12){
     width: 15%;
+}
+@media (max-width: 768px) {
+    .main h1 {
+        font-size: 20px;
+    }
+    .value {
+        font-size: 10px;
+    }
+    .classes span {
+        font-size: 10px;
+    }
+    .classes * {
+        flex: 0 0 1%;
+        padding: 5px;
+        text-align: left;
+        max-width: 50px;
+    }
+}
+/* For screens larger than 768px (e.g., tablets and desktops) */
+@media (min-width: 769px) {
+
 }
